@@ -68,33 +68,18 @@ queueScrollProgress();
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const phoneVideo = document.querySelector('.phone-video');
-const phoneMotionToggle = document.querySelector('.phone-motion-toggle');
-if (phoneVideo && phoneMotionToggle) {
+if (phoneVideo) {
   let videoVisible = false;
-  let manuallyPaused = false;
-  let manuallyPlayed = false;
 
   function syncPhoneVideo() {
-    const shouldPlay = videoVisible && !document.hidden && !manuallyPaused && (!reducedMotion.matches || manuallyPlayed);
+    const shouldPlay = videoVisible && !document.hidden && !reducedMotion.matches;
     if (shouldPlay) {
       phoneVideo.play().catch(() => {});
     } else {
       phoneVideo.pause();
     }
-    phoneMotionToggle.textContent = shouldPlay ? 'Wstrzymaj wideo' : 'Odtwórz wideo';
-    phoneMotionToggle.setAttribute('aria-label', shouldPlay ? 'Wstrzymaj wideo w tle' : 'Odtwórz wideo w tle');
   }
 
-  phoneMotionToggle.addEventListener('click', () => {
-    if (phoneVideo.paused) {
-      manuallyPaused = false;
-      manuallyPlayed = true;
-    } else {
-      manuallyPaused = true;
-      manuallyPlayed = false;
-    }
-    syncPhoneVideo();
-  });
   if ('IntersectionObserver' in window) {
     const videoObserver = new IntersectionObserver((entries) => {
       videoVisible = entries[0].isIntersecting;
