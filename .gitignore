@@ -1,0 +1,13 @@
+.DS_Store
+.vercel/
+audit/
+design-qa.md
+ux-audit.md
+assets/*prompt*.md
+assets/consultation.jpg
+assets/category-contracts.jpg
+assets/category-family.jpg
+assets/category-inheritance.jpg
+assets/category-property.jpg
+assets/category-taxes.jpg
+assets/category-work.jpg
