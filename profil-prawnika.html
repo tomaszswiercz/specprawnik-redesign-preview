@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=7" />
-    <link rel="stylesheet" href="profile.css?v=1" />
-    <script src="main.js?v=4" defer></script>
+    <link rel="stylesheet" href="profile.css?v=2" />
+    <script src="main.js?v=5" defer></script>
   </head>
   <body class="profile-page">
     <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -45,7 +45,7 @@
             <div class="profile-identity">
               <div class="profile-portrait"><img src="assets/piotr-stosio.jpg" width="88" height="88" alt="Piotr Stosio" /></div>
               <div class="profile-identity-copy">
-                <p class="profile-kicker">RADCA PRAWNY <span aria-hidden="true">·</span> WARSZAWA</p>
+                <p class="profile-kicker">RADCA PRAWNY <span aria-hidden="true">·</span> WARSZAWA <span aria-hidden="true">·</span> PROFIL PREMIUM</p>
                 <h1 id="profile-name">Piotr Stosio</h1>
                 <p class="profile-practice">Postępowania sądowe, odszkodowania i sprawy majątkowe</p>
                 <div class="profile-trust-row">
@@ -57,7 +57,7 @@
             </div>
             <div class="profile-hero-note">
               <span class="note-line" aria-hidden="true"></span>
-              <p>Sprawdź zakres pomocy, opinie i cenę wybranych usług. Potem zdecyduj, czy chcesz napisać, zamówić usługę czy umówić wizytę.</p>
+              <p>33 opisane usługi, 236 opinii i 2277 odpowiedzi na pytania. Sprawdź doświadczenie prawnika, zanim zdecydujesz o kontakcie.</p>
             </div>
           </section>
         </div>
@@ -65,7 +65,7 @@
 
       <nav class="profile-tabs" aria-label="Sekcje profilu">
         <div class="shell profile-tabs-inner">
-          <a href="#zakres">Zakres pomocy</a><a href="#uslugi">Usługi i ceny</a><a href="#o-prawniku">O prawniku</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a>
+          <a href="#zakres">Zakres pomocy</a><a href="#uslugi">Usługi</a><a href="#doswiadczenie">Doświadczenie</a><a href="#opinie">Opinie</a><a href="#odpowiedzi">Odpowiedzi</a><a href="#publikacje">Publikacje</a><a href="#rozliczenia">Ceny i dostępność</a><a href="#kontakt">Kontakt</a>
         </div>
       </nav>
 
@@ -83,29 +83,170 @@
           </section>
 
           <section class="profile-section services-section" id="uslugi" aria-labelledby="services-heading">
-            <div class="profile-section-head"><span class="section-index">KONKRETNE OPCJE</span><h2 id="services-heading">Usługi z podaną ceną</h2><p>Sprawdź, co obejmuje usługa, zanim przejdziesz do zamówienia. Aktualny zakres i cenę potwierdzisz w serwisie.</p></div>
+            <div class="profile-section-head"><span class="section-index">KONKRETNE OPCJE</span><h2 id="services-heading">Usługi i ceny</h2><p>Trzy szybkie propozycje i pełny katalog 33 usług. Wybierz sprawę prywatną lub firmową, a potem sprawdź zakres usługi przed zamówieniem.</p></div>
             <div class="service-list">
               <article class="service-item"><div><span class="service-type">PORADA MAILOWA</span><h3>Porada prawna</h3><p>Odpowiedź na opisaną sprawę przesłana mailem.</p></div><div class="service-end"><strong>200 zł</strong><a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-8/">Sprawdź usługę <span aria-hidden="true">↗</span></a></div></article>
               <article class="service-item"><div><span class="service-type">ROZMOWA TELEFONICZNA</span><h3>Porada w sprawie spadkowej</h3><p>Omówienie sprawy spadkowej przez telefon.</p></div><div class="service-end"><strong>200 zł</strong><a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-w-sprawie-spadkowej/">Sprawdź usługę <span aria-hidden="true">↗</span></a></div></article>
               <article class="service-item"><div><span class="service-type">PISMO</span><h3>Wezwanie do zapłaty</h3><p>Przygotowanie dokumentu w sprawie należności.</p></div><div class="service-end"><strong>350 zł</strong><a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/wezwanie-do-zaplaty-2/">Sprawdź usługę <span aria-hidden="true">↗</span></a></div></article>
             </div>
             <p class="service-disclaimer">Ceny pochodzą z aktualnego profilu prawnika. Przed zakupem sprawdź cenę i warunki na stronie usługi.</p>
+            <div class="service-catalog" aria-labelledby="catalog-heading">
+              <div class="catalog-top"><div><span class="section-index">PEŁNA OFERTA</span><h3 id="catalog-heading">Wszystkie 33 usługi</h3></div><p>Wybierz typ sprawy, rozwiń kategorię i otwórz szczegóły usługi.</p></div>
+              <div class="service-filters" role="group" aria-label="Typ sprawy"><button type="button" class="is-active" data-service-filter="private" aria-pressed="true">Sprawy prywatne <span>24</span></button><button type="button" data-service-filter="firm" aria-pressed="false">Sprawy firmowe <span>9</span></button></div>
+              <div class="catalog-groups" data-service-set="private">
+                <details class="catalog-group" open>
+                  <summary><span>Majątek</span><small>9 usług</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/odszkodowania-regres-ubezpieczeniowy/"><span>Odszkodowania: Regres ubezpieczeniowy</span><strong>100 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-biznes-48/"><span>Porada prawna: Biznes</span><strong>100 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-8/"><span>Porada prawna</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-w-sprawie-nakazu-zaplaty-53/"><span>Porada prawna w sprawie nakazu zapłaty</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-w-sprawie-o-ogloszenie-upadlosci-23/"><span>Porada prawna w sprawie o ogłoszenie upadłości konsumenckiej</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-odszkodowanie-za-naprawe-pojazdu/"><span>Porada prawna: Odszkodowanie za naprawę pojazdu</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-zalozenie-dzialalnosci-gospodarczej/"><span>Porada prawna: Założenie działalności gospodarczej</span><strong>250 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/wezwanie-do-zaplaty-2/"><span>Wezwanie do zapłaty</span><strong>350 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/upadlosc-konsumencka-2/"><span>Upadłość konsumencka</span><strong>5000 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Sprawy ubezpieczeniowe</span><small>4 usługi</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/odszkodowania-porada-prawna/"><span>Porada prawna: Odszkodowanie i zadośćuczynienie</span><strong>100 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/wypadek-przy-pracy-na-chodniku-lub-w-rolnictwie/"><span>Porada prawna: Wypadek przy pracy, Wypadek w rolnictwie</span><strong>100 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/odwolanie-od-decyzji-zus/"><span>Odwołanie od decyzji ZUS</span><strong>400 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/orzeczenie-o-niepelnosprawnosci-odwolanie-od-orz-2/"><span>Orzeczenie o niepełnosprawności - odwołanie od orzeczenia o niepełnosprawności - przygotowanie pisma</span><strong>615 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Nieruchomości</span><small>2 usługi</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/umowa-rezerwacyjnaumowa-deweloperska-sprawdzenie/"><span>Umowa rezerwacyjna/umowa deweloperska - sprawdzenie</span><strong>300 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/wezwanie-do-zaplaty-dewelopera/"><span>Wezwanie do zapłaty dewelopera</span><strong>369 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Zdrowie i błędy medyczne</span><small>3 usługi</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-odszkodowanie-zadoscuczynienie-blad/"><span>Porada prawna: Odszkodowanie, zadośćuczynienie, błąd medyczny</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-wypadek-na-chodniku/"><span>Porada prawna: Wypadek na chodniku</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-wypadek-na-trampolinie-wypadek-na-ba/"><span>Porada prawna: wypadek na trampolinie, wypadek na basenie, wypadek na nartach</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Spadki i testamenty</span><small>1 usługa</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-w-sprawie-spadkowej/"><span>Porada prawna w sprawie spadkowej</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Kredyty i sprawy bankowe</span><small>1 usługa</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/sprawdzenie-umowy-pozyczki-45/"><span>Sprawdzenie umowy pożyczki</span><strong>250 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Koronawirus (covid-19)</span><small>4 usługi</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/analiza-umowy-koronawirus/"><span>Analiza umowy - koronawirus</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/odstapienie-od-umowy-organizacji-wycieczkirezygnac/"><span>Odstąpienie od umowy organizacji wycieczki/Rezygnacja z hotelu - porada prawna</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/rozwiazanie-lub-zmiana-warunkow-najmu-lokalu-uzytk/"><span>Rozwiązanie lub zmiana warunków najmu lokalu użytkowego - porada prawna</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/wypowiedzenie-umowyzwolnienie-z-pracy-porada-prawn/"><span>Wypowiedzenie umowy/zwolnienie z pracy - Porada prawna</span><strong>200 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+              </div>
+              <div class="catalog-groups" data-service-set="firm" hidden>
+                <details class="catalog-group" open>
+                  <summary><span>Działalność gospodarcza</span><small>2 usługi</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/dzialalnosc-gospodarcza-porada-prawna/"><span>Działalność gospodarcza - porada prawna</span><strong>250 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/utworzenie-dokumentu-regulamin-sklepu-internetoweg/"><span>Utworzenie dokumentu: Regulamin sklepu internetowego</span><strong>799 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Spółki</span><small>3 usługi</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/wniosek-do-krs/"><span>Wniosek do KRS</span><strong>300 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/zalozenie-spolki-handlowej/"><span>Założenie spółki handlowej</span><strong>2400 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/zalozenie-spolki-z-ograniczona-odpowiedzialnoscia/"><span>Założenie spółki z ograniczoną odpowiedzialnością</span><strong>2400 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Umowy</span><small>2 usługi</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/przygotowanie-dokumentu-wezwanie-do-zaplaty/"><span>Przygotowanie dokumentu: Wezwanie do zapłaty</span><strong>249 zł</strong><span aria-hidden="true">↗</span></a>
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/sporzadzenie-umowy/"><span>Sporządzenie umowy</span><strong>615 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Spory z firmami</span><small>1 usługa</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/porada-prawna-spory-z-firmami/"><span>Porada prawna: Spory z firmami</span><strong>100 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+                <details class="catalog-group">
+                  <summary><span>Koronawirus (covid-19)</span><small>1 usługa</small><span class="catalog-chevron" aria-hidden="true">⌄</span></summary>
+                  <div class="catalog-rows">
+                    <a href="https://www.specprawnik.pl/activbox/usluga/piotr-stosio-57300/analiza-umowy-koronawirus-2/"><span>Analiza umowy - koronawirus</span><strong>150 zł</strong><span aria-hidden="true">↗</span></a>
+                  </div>
+                </details>
+              </div>
+            </div>
           </section>
 
           <section class="profile-section about-section" id="o-prawniku" aria-labelledby="about-heading">
             <div class="profile-section-head"><span class="section-index">POZNAJ PRAWNIKA</span><h2 id="about-heading">Praktyka oparta na prowadzeniu spraw</h2></div>
-            <p>Piotr Stosio od lat prowadzi postępowania sądowe, szczególnie dotyczące odszkodowań. Reprezentuje klientów w sprawach na terenie całej Polski. W profilu podkreśla, że dobrze dobrana taktyka od początku procesu ułatwia dalsze prowadzenie sprawy.</p>
-            <div class="profile-facts"><div><span>Wykonywanie zawodu od</span><strong>2018 roku</strong></div><div><span>Izba zawodowa</span><strong>OIRP w Warszawie</strong></div><div><span>Kancelaria</span><strong>Warszawa, Wola</strong></div></div>
+            <p>Piotr Stosio prowadzi postępowania sądowe, przede wszystkim odszkodowawcze. W swoim profilu podkreśla znaczenie dobrania taktyki już na początku procesu. Prowadzi sprawy na terenie całej Polski, a w Warszawie przyjmuje w kancelarii przy Alei Prymasa Tysiąclecia.</p>
+            <div class="profile-facts"><div><span>Wykonywanie zawodu od</span><strong>2018 roku</strong></div><div><span>Izba zawodowa</span><strong>OIRP w Warszawie</strong></div><div><span>Rekomendacja</span><strong>Adrianna Kijuk Usługi Edukacyjne</strong></div></div>
+            <div class="about-links"><span>WIĘCEJ OD PRAWNIKA</span><a href="https://warszawskakancelaria.com/">Strona kancelarii <span aria-hidden="true">↗</span></a><a href="https://zadoscuczynienie.com/">Blog o odszkodowaniach <span aria-hidden="true">↗</span></a><a href="https://odszkodowanieoddewelopera.pl/">Blog o roszczeniach wobec deweloperów <span aria-hidden="true">↗</span></a><a href="https://odszkodowaniewypadek.pl/">Blog o wypadkach <span aria-hidden="true">↗</span></a></div>
           </section>
 
-          <section class="profile-section cases-section" aria-labelledby="cases-heading">
-            <div class="profile-section-head"><span class="section-index">DOŚWIADCZENIE</span><h2 id="cases-heading">Przykłady prowadzonych spraw</h2><p>Wybrane rodzaje spraw opisane przez prawnika w jego profilu.</p></div>
-            <div class="case-list"><div><span>01 / ODSZKODOWANIA</span><p>Roszczenia po wypadkach komunikacyjnych, w tym o rentę i zadośćuczynienie.</p></div><div><span>02 / NIERUCHOMOŚCI</span><p>Spory dotyczące umów deweloperskich i wad lokali.</p></div><div><span>03 / UMOWY</span><p>Analiza i przygotowanie umów najmu oraz umów dla przedsiębiorców.</p></div></div>
+          <section class="profile-section cases-section" id="doswiadczenie" aria-labelledby="cases-heading">
+            <div class="profile-section-head"><span class="section-index">DOŚWIADCZENIE</span><h2 id="cases-heading">Sprawy prowadzone przez prawnika</h2><p>Przejrzyj obszary praktyki i przykłady z profilu. Liczby oznaczają opisane tam sprawy w danej kategorii.</p></div>
+            <div class="case-list"><div><span>01 / WYPADKI I UBEZPIECZENIA</span><p>Sprawy po wypadkach drogowych i w pracy, roszczenia o odszkodowanie, rentę i zadośćuczynienie.</p></div><div><span>02 / NIERUCHOMOŚCI</span><p>Spory z deweloperami, analiza umów oraz roszczenia dotyczące najmu i wad lokali.</p></div><div><span>03 / BIZNES I UMOWY</span><p>Rejestracja spółek, umowy dla firm, windykacja i postępowania sądowe przedsiębiorców.</p></div></div>
+            <div class="experience-index" aria-label="Kategorie opisanych spraw">
+              <details class="experience-group" open><summary><span>Zdrowie i błędy medyczne</span><small>27 spraw</small></summary><p>Wypadki drogowe, w pracy, w przestrzeni publicznej i sprawy związane z błędami medycznymi.</p></details>
+              <details class="experience-group"><summary><span>Majątek</span><small>15 spraw</small></summary><p>Odszkodowania za pojazdy, upadłość konsumencka, odzyskiwanie należności i spory o zapłatę.</p></details>
+              <details class="experience-group"><summary><span>Umowy i kontrakty</span><small>14 spraw</small></summary><p>Umowy spółek, najmu, współpracy oraz regulaminy sklepów internetowych.</p></details>
+              <details class="experience-group"><summary><span>Nieruchomości</span><small>13 spraw</small></summary><p>Umowy deweloperskie, opóźnienia w wydaniu lokalu, najem i roszczenia wobec deweloperów.</p></details>
+              <details class="experience-group"><summary><span>Sprawy ubezpieczeniowe</span><small>11 spraw</small></summary><p>Spory z ubezpieczycielami, ZUS i dochodzenie odszkodowań po wypadkach.</p></details>
+              <details class="experience-group"><summary><span>Działalność gospodarcza</span><small>10 spraw</small></summary><p>Zakładanie firm, fundacji i stowarzyszeń, bieżąca obsługa oraz spory przedsiębiorców.</p></details>
+              <details class="experience-group"><summary><span>Praca</span><small>10 spraw</small></summary><p>Wypadki przy pracy, zaległe wynagrodzenie i odwołania od wypowiedzenia.</p></details>
+              <details class="experience-group"><summary><span>Spółki</span><small>8 spraw</small></summary><p>Zakładanie i likwidacja spółek, dokumenty założycielskie i postępowania przed KRS.</p></details>
+              <details class="experience-group"><summary><span>Rozwód i rodzina</span><small>6 spraw</small></summary><p>Alimenty, ich podwyższenie lub uchylenie oraz porady w sprawach rodzinnych.</p></details>
+              <details class="experience-group"><summary><span>Spory z firmami</span><small>4 sprawy</small></summary><p>Windykacja, spory z bankami i dochodzenie roszczeń wobec przedsiębiorców.</p></details>
+              <details class="experience-group"><summary><span>Sprawy pracownicze</span><small>3 sprawy</small></summary><p>Roszczenia pracowników o wynagrodzenie, odszkodowanie i ustalenie stosunku pracy.</p></details>
+              <details class="experience-group"><summary><span>Spadki i testamenty</span><small>3 sprawy</small></summary><p>Zachowek, stwierdzenie nabycia spadku i spór o ważność testamentu.</p></details>
+              <details class="experience-group"><summary><span>Własność intelektualna</span><small>2 sprawy</small></summary><p>Ochrona dóbr osobistych przedsiębiorcy i przygotowanie umowy lojalnościowej.</p></details>
+            </div>
+            <a class="profile-text-link" href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/">Zobacz pełne opisy prowadzonych spraw <span aria-hidden="true">↗</span></a>
           </section>
 
           <section class="profile-section reviews-section" id="opinie" aria-labelledby="reviews-heading">
             <div class="profile-section-head"><span class="section-index">OPINIE KLIENTÓW</span><h2 id="reviews-heading">Sprawdź doświadczenia innych</h2></div>
-            <div class="reviews-overview"><div class="reviews-score"><span class="reviews-stars" aria-label="Ocena 4,9 na 5">★★★★★</span><strong>4,9<span>/5</span></strong><span>na podstawie 236 opinii</span></div><div class="reviews-copy"><p>Oceny pomagają wstępnie porównać prawników. Przeczytaj pełne opinie i zwróć uwagę na sprawy podobne do Twojej.</p><a class="profile-text-link" href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/">Przeczytaj opinie w aktualnym serwisie <span aria-hidden="true">↗</span></a></div></div>
+            <div class="reviews-overview"><div class="reviews-score"><span class="reviews-stars" aria-label="Ocena 4,9 na 5">★★★★★</span><strong>4,9<span>/5</span></strong><span>na podstawie 236 opinii</span></div><div class="reviews-copy"><p>Oceny pomagają wstępnie porównać prawników. Poniżej krótkie podsumowania wybranych opinii; pełną treść przeczytasz w aktualnym serwisie.</p><a class="profile-text-link" href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/opinie/">Przeczytaj wszystkie opinie <span aria-hidden="true">↗</span></a></div></div>
+            <div class="review-list"><article><div><strong>Anonim</strong><span>22 czerwca 2026 · 5/5</span></div><p>Klient ocenił odpowiedź jako wyczerpującą i poleca prawnika.</p></article><article><div><strong>Anonim</strong><span>2 czerwca 2026 · 5/5</span></div><p>W opinii wyróżniono szybki czas odpowiedzi.</p></article><article><div><strong>Małgorzata</strong><span>21 marca 2024 · 5/5</span></div><p>Klientka doceniła konkretne porady i wskazówki.</p></article></div>
+            <a class="profile-text-link review-action" href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/opinia/">Dodaj swoją opinię <span aria-hidden="true">↗</span></a>
+          </section>
+
+          <section class="profile-section answers-section" id="odpowiedzi" aria-labelledby="answers-heading">
+            <div class="profile-section-head"><span class="section-index">AKTYWNOŚĆ W SERWISIE</span><h2 id="answers-heading">Odpowiedzi na pytania</h2><p>Prawnik udzielił 2277 odpowiedzi w serwisie. Zobacz przykładowe tematy, w których pomagał użytkownikom.</p></div>
+            <div class="answer-list">
+              <a href="https://www.specprawnik.pl/zapytaj-prawnika/problem/czy-mozna-zadac-25-000-zl-zadoscuczynienia-od-prac/"><span>10 WRZEŚNIA 2026 · WYPADEK PRZY PRACY</span><strong>Jak dochodzić zadośćuczynienia po wypadku w pracy?</strong><span class="answer-link">Zobacz pytanie i odpowiedź <span aria-hidden="true">↗</span></span></a>
+              <a href="https://www.specprawnik.pl/zapytaj-prawnika/problem/cialo-obce-w-oku-po-zabiegu-kosmetycznym-czego-moz/"><span>9 WRZEŚNIA 2026 · ZDROWIE</span><strong>Jakie roszczenia przysługują po urazie podczas zabiegu?</strong><span class="answer-link">Zobacz pytanie i odpowiedź <span aria-hidden="true">↗</span></span></a>
+              <a href="https://www.specprawnik.pl/zapytaj-prawnika/problem/sporzadzenie-wezwania-do-zaplaty/"><span>21 SIERPNIA 2026 · SPÓR Z FIRMĄ</span><strong>Wezwanie do zapłaty i pozew przeciwko wykonawcy</strong><span class="answer-link">Zobacz pytanie i odpowiedź <span aria-hidden="true">↗</span></span></a>
+            </div>
+          </section>
+
+          <section class="profile-section publications-section" id="publikacje" aria-labelledby="publications-heading">
+            <div class="profile-section-head"><span class="section-index">WIEDZA PRAWNIKA</span><h2 id="publications-heading">Publikacje</h2><p>Artykuły opublikowane przez prawnika w poradniku SpecPrawnik.</p></div>
+            <div class="publication-grid"><a href="https://www.specprawnik.pl/poradnik-prawny/odszkodowanie-za-wypadek-na-basenie/"><span>PORADNIK · ODSZKODOWANIA</span><strong>Odszkodowanie za wypadek na basenie</strong><span aria-hidden="true">↗</span></a><a href="https://www.specprawnik.pl/poradnik-prawny/odszkodowanie-za-wypadek-w-centrum-handlowym/"><span>PORADNIK · ODSZKODOWANIA</span><strong>Odszkodowanie za wypadek w centrum handlowym</strong><span aria-hidden="true">↗</span></a><a href="https://www.specprawnik.pl/poradnik-prawny/odszkodowanie-za-wypadek-na-cmentarzu/"><span>PORADNIK · ODSZKODOWANIA</span><strong>Odszkodowanie za wypadek na cmentarzu</strong><span aria-hidden="true">↗</span></a><a href="https://www.specprawnik.pl/poradnik-prawny/odszkodowanie-po-wypadku-drogowym/"><span>PORADNIK · ODSZKODOWANIA</span><strong>Odszkodowanie po wypadku drogowym</strong><span aria-hidden="true">↗</span></a></div>
+            <a class="profile-text-link publications-more" href="https://www.specprawnik.pl/poradnik-prawny/autor/piotr-stosio-57300/">Zobacz wszystkie publikacje <span aria-hidden="true">↗</span></a>
+          </section>
+
+          <section class="profile-section billing-section" id="rozliczenia" aria-labelledby="billing-heading">
+            <div class="profile-section-head"><span class="section-index">PRZED KONTAKTEM</span><h2 id="billing-heading">Rozliczenia i dostępność</h2><p>Stawka godzinowa i godziny podane w obecnym profilu. Termin oraz wycenę konkretnej sprawy potwierdź z kancelarią.</p></div>
+            <div class="billing-grid"><div><span>STAWKA GODZINOWA</span><strong>120 zł <small>+ 23% VAT</small></strong></div><div><span>ROZLICZENIE ZA SPRAWĘ</span><strong>Tak, po wycenie</strong></div></div>
+            <div class="hours-card"><h3>Dostępność w tygodniu</h3><dl><div><dt>Poniedziałek – piątek</dt><dd>8:00–19:00</dd></div><div><dt>Sobota</dt><dd>8:00–18:00</dd></div><div><dt>Niedziela</dt><dd>Nieczynne</dd></div></dl><p>Godziny z profilu nie oznaczają wolnych terminów wizyt.</p></div>
           </section>
 
           <section class="profile-section location-section" id="kontakt" aria-labelledby="location-heading">
@@ -115,16 +256,17 @@
         </div>
 
         <aside class="contact-panel" aria-labelledby="contact-heading">
-          <div class="contact-panel-top"><span class="contact-step">TWÓJ NASTĘPNY KROK</span><h2 id="contact-heading">Porozmawiaj o swojej sprawie</h2><p>Opisz krótko problem i wybierz sposób kontaktu. Dalszy krok odbywa się w aktualnym serwisie SpecPrawnik.</p></div>
-          <a class="contact-primary" href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/zadaj_pytanie/">Wyślij wiadomość <span aria-hidden="true">→</span></a>
-          <a class="contact-secondary" href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/zamow-wizyte/">Poproś o termin wizyty <span aria-hidden="true">↗</span></a>
-          <div class="contact-details"><div><span>CZAS ODPOWIEDZI</span><strong>W ciągu 24 godzin</strong></div><div><span>TELEFON</span><a href="tel:+48604183261">604 183 261</a></div></div>
-          <p class="contact-footnote">Kontakt i zamówienia obsługuje obecny serwis. Nie wysyłaj danych osobowych przez ten podgląd.</p>
+          <div class="contact-panel-top"><span class="contact-step">TWÓJ NASTĘPNY KROK</span><h2 id="contact-heading">Masz sprawę dla Piotra Stosia?</h2><p>Poproś o indywidualną wycenę albo wybierz gotową usługę z podaną ceną.</p></div>
+          <a class="contact-primary" href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/#problem-button">Poproś o wycenę <span aria-hidden="true">↗</span></a>
+          <a class="contact-secondary" href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/zadaj_pytanie/">Wyślij wiadomość <span aria-hidden="true">↗</span></a>
+          <a class="contact-secondary" href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/zamow-wizyte/">Zamów wizytę <span aria-hidden="true">↗</span></a>
+          <div class="contact-details"><div><span>ODPOWIEDŹ</span><strong>W ciągu 24 godzin</strong></div><div><span>TELEFON</span><a href="tel:+48604183261">604 183 261</a></div><div><span>STRONA WWW</span><a href="https://warszawskakancelaria.com/">warszawskakancelaria.com</a></div></div>
+          <p class="contact-footnote">Formularze kontaktu, wyceny i rezerwacji działają w obecnym serwisie. Po przejściu do wyceny wybierz tam przycisk „Poproś o wycenę”.</p>
         </aside>
       </div>
     </main>
 
-    <div class="mobile-contact-bar"><div><span>Piotr Stosio</span><strong>Radca prawny · Warszawa</strong></div><a href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/zadaj_pytanie/">Napisz <span aria-hidden="true">→</span></a></div>
-    <footer class="site-footer profile-footer"><div class="shell footer-inner"><div><a class="wordmark footer-brand" href="index.html">spec<span>prawnik</span><i>.pl</i></a><p>Wybierz prawnika świadomie.</p></div><nav aria-label="Linki w stopce"><a href="index.html#prawnicy">Prawnicy</a><a href="index.html#sciezki">Sposoby pomocy</a><a href="index.html#dla-prawnikow">Dla prawników</a><a href="https://www.specprawnik.pl/inne/kontakt/">Kontakt</a></nav></div><div class="shell footer-bottom">Koncepcja redesignu profilu prawnika. Informacje i ceny są przykładowym przekrojem aktualnego profilu; przed zamówieniem sprawdź je w serwisie SpecPrawnik.</div></footer>
+    <div class="mobile-contact-bar"><div><span>Piotr Stosio</span><strong>Radca prawny · Warszawa</strong></div><a href="https://www.specprawnik.pl/radca-prawny/piotr-stosio-57300/#problem-button">Poproś o wycenę <span aria-hidden="true">↗</span></a></div>
+    <footer class="site-footer profile-footer"><div class="shell footer-inner"><div><a class="wordmark footer-brand" href="index.html">spec<span>prawnik</span><i>.pl</i></a><p>Wybierz prawnika świadomie.</p></div><nav aria-label="Linki w stopce"><a href="index.html#prawnicy">Prawnicy</a><a href="index.html#sciezki">Sposoby pomocy</a><a href="index.html#dla-prawnikow">Dla prawników</a><a href="https://www.specprawnik.pl/inne/kontakt/">Kontakt</a></nav></div><div class="shell footer-bottom">Koncepcja redesignu profilu prawnika. Dane i ceny odzwierciedlają publiczny profil w dniu przygotowania podglądu; przed zamówieniem sprawdź aktualne warunki w serwisie SpecPrawnik.</div></footer>
   </body>
 </html>

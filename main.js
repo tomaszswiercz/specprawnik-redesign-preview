@@ -27,6 +27,20 @@ document.querySelectorAll('[data-topic]').forEach((button) => {
   });
 });
 
+const serviceFilters = [...document.querySelectorAll('[data-service-filter]')];
+const serviceSets = [...document.querySelectorAll('[data-service-set]')];
+serviceFilters.forEach((button) => {
+  button.addEventListener('click', () => {
+    const selected = button.dataset.serviceFilter;
+    serviceFilters.forEach((filter) => {
+      const active = filter.dataset.serviceFilter === selected;
+      filter.classList.toggle('is-active', active);
+      filter.setAttribute('aria-pressed', String(active));
+    });
+    serviceSets.forEach((set) => { set.hidden = set.dataset.serviceSet !== selected; });
+  });
+});
+
 const progressBar = document.querySelector('.scroll-progress');
 let progressFrame = 0;
 function updateScrollProgress() {
