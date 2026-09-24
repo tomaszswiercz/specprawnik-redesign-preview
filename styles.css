@@ -319,3 +319,17 @@ section[id],.help-layout[id]{scroll-margin-top:94px}
 @media(max-width:760px){.topic-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.topic-card{grid-column:span 1;height:267px}.topic-card:nth-child(-n+2){grid-column:span 2;height:326px}.topic-card img,.topic-card:nth-child(-n+2) img{top:0;left:0;right:auto;width:100%;height:59%}.topic-card-content,.topic-card:nth-child(-n+2) .topic-card-content{top:auto;left:0;right:0;bottom:0;width:100%;height:43%;padding:15px 15px 13px}.topic-card:nth-child(-n+2) .topic-card-content{padding:19px 20px 17px}.topic-card-number{font-size:9px;letter-spacing:.07em}.topic-card strong{font-size:17px;margin-top:5px}.topic-card:nth-child(-n+2) strong{font-size:23px;margin-top:8px}.topic-card-action{font-size:11px;padding-top:6px;min-height:27px}.topic-card-action span{width:25px;height:25px;font-size:17px}}
 @media(max-width:360px){.topic-list{grid-template-columns:1fr}.topic-card,.topic-card:nth-child(-n+2){grid-column:span 1}.topic-card{height:280px}}
 @media(prefers-reduced-motion:reduce){.topic-card:hover,.topic-card:focus-visible,.topic-card:hover img,.topic-card:focus-visible img,.topic-card:hover .topic-card-action span,.topic-card:focus-visible .topic-card-action span{transform:none}}
+
+/* Editorial video CTA */
+.phone{position:relative;isolation:isolate;min-height:440px;overflow:hidden;background:#0c2b48 url('assets/cta-phone-poster.jpg') center/cover no-repeat}
+.phone::before{content:'';position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(8,31,53,.97) 0%,rgba(8,31,53,.91) 36%,rgba(8,31,53,.62) 62%,rgba(8,31,53,.18) 100%);pointer-events:none}
+.phone-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 47%;z-index:0}
+.phone-inner{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:45px;min-height:440px;padding-top:78px;padding-bottom:76px}
+.phone-copy{max-width:635px}
+.phone .section-index{color:#c3d8ea}
+.phone h2{max-width:640px;margin:16px 0 17px;font-size:clamp(36px,3.5vw,51px);line-height:1.1;letter-spacing:-.057em}
+.phone p{max-width:565px;color:#d0dde8;font-size:15px;line-height:1.65}
+.phone-button{display:inline-flex;margin-top:27px;white-space:normal}
+.phone-motion-toggle{flex:none;min-height:44px;padding:9px 12px;border:1px solid rgba(255,255,255,.6);border-radius:5px;background:rgba(8,31,53,.35);color:#fff;font-size:11px;font-weight:800;white-space:nowrap;backdrop-filter:blur(5px)}
+.phone-motion-toggle:hover{background:rgba(255,255,255,.16);border-color:#fff}
+@media(max-width:760px){.phone{min-height:490px;background-position:66% center}.phone::before{background:linear-gradient(90deg,rgba(8,31,53,.94),rgba(8,31,53,.66)),linear-gradient(0deg,rgba(8,31,53,.7),transparent 75%)}.phone-video{object-position:65% center}.phone-inner{min-height:490px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:24px;padding-top:64px;padding-bottom:32px}.phone h2{font-size:clamp(32px,8vw,40px)}.phone p{font-size:14px}.phone-button{margin-top:24px;max-width:100%}.phone-motion-toggle{align-self:flex-end}}

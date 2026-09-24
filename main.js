@@ -67,6 +67,47 @@ window.addEventListener('resize', queueScrollProgress);
 queueScrollProgress();
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const phoneVideo = document.querySelector('.phone-video');
+const phoneMotionToggle = document.querySelector('.phone-motion-toggle');
+if (phoneVideo && phoneMotionToggle) {
+  let videoVisible = false;
+  let manuallyPaused = false;
+  let manuallyPlayed = false;
+
+  function syncPhoneVideo() {
+    const shouldPlay = videoVisible && !document.hidden && !manuallyPaused && (!reducedMotion.matches || manuallyPlayed);
+    if (shouldPlay) {
+      phoneVideo.play().catch(() => {});
+    } else {
+      phoneVideo.pause();
+    }
+    phoneMotionToggle.textContent = shouldPlay ? 'Wstrzymaj wideo' : 'Odtwórz wideo';
+    phoneMotionToggle.setAttribute('aria-label', shouldPlay ? 'Wstrzymaj wideo w tle' : 'Odtwórz wideo w tle');
+  }
+
+  phoneMotionToggle.addEventListener('click', () => {
+    if (phoneVideo.paused) {
+      manuallyPaused = false;
+      manuallyPlayed = true;
+    } else {
+      manuallyPaused = true;
+      manuallyPlayed = false;
+    }
+    syncPhoneVideo();
+  });
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      videoVisible = entries[0].isIntersecting;
+      syncPhoneVideo();
+    }, { threshold: 0.2 });
+    videoObserver.observe(phoneVideo);
+  } else {
+    videoVisible = true;
+    syncPhoneVideo();
+  }
+  reducedMotion.addEventListener('change', syncPhoneVideo);
+  document.addEventListener('visibilitychange', syncPhoneVideo);
+}
 if (!reducedMotion.matches) {
   const revealElements = [...document.querySelectorAll('.featured-intro, .lawyer-list-item, .paths .section-head, .path-item, .steps .section-head, .steps-list li, .topics-intro, .topic-card, .business-copy, .business-topics, .phone-inner, .lawyers-visual, .lawyers-copy, .faq-layout > div:first-child, .faq-list details')];
   revealElements.forEach((element) => {
