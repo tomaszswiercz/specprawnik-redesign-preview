@@ -19,6 +19,7 @@ mainNav.addEventListener('click', (event) => {
 const issueInput = document.getElementById('issue');
 document.querySelectorAll('[data-topic]').forEach((button) => {
   button.addEventListener('click', () => {
+    if (!issueInput) return;
     issueInput.value = button.dataset.topic;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.getElementById('szukaj').scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth', block: 'center' });
