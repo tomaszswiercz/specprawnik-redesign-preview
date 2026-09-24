@@ -41,6 +41,17 @@ serviceFilters.forEach((button) => {
   });
 });
 
+const expandExperienceButton = document.querySelector('[data-expand-experience]');
+if (expandExperienceButton) {
+  const experienceGroups = [...document.querySelectorAll('.experience-group')];
+  expandExperienceButton.addEventListener('click', () => {
+    const expand = expandExperienceButton.getAttribute('aria-expanded') !== 'true';
+    experienceGroups.forEach((group) => { group.open = expand; });
+    expandExperienceButton.setAttribute('aria-expanded', String(expand));
+    expandExperienceButton.querySelector('[data-expand-label]').textContent = expand ? 'Zwiń wszystkie kategorie' : 'Rozwiń wszystkie kategorie';
+  });
+}
+
 const progressBar = document.querySelector('.scroll-progress');
 let progressFrame = 0;
 function updateScrollProgress() {
