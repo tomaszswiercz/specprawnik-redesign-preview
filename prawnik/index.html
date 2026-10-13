@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css?v=9" />
-    <link rel="stylesheet" href="listing.css?v=1" />
+    <link rel="stylesheet" href="listing.css?v=2" />
     <script src="../main.js?v=8" defer></script>
-    <script src="listing.js?v=1" defer></script>
+    <script src="listing.js?v=2" defer></script>
   </head>
   <body class="listing-page">
     <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -37,14 +37,15 @@
         <div class="shell">
           <nav class="listing-breadcrumbs" aria-label="Ścieżka nawigacji"><a href="../index.html">Strona główna</a><span aria-hidden="true">/</span><span aria-current="page">Znajdź prawnika</span></nav>
           <div class="listing-intro-grid">
-            <div><span class="section-index">WYSZUKIWARKA PRAWNIKÓW</span><h1 id="listing-title">Wybierz prawnika do swojej sprawy.</h1><p>Przejrzyj zakres pomocy, oceny klientów i sposoby kontaktu. Zawęź wyniki do tematu, który Cię interesuje.</p></div>
-            <div class="listing-intro-note"><span aria-hidden="true">01 / 03</span><strong>Najpierw sprawa.<br />Potem specjalista.</strong><p>Jeśli nie znasz dziedziny prawa, opisz problem własnymi słowami w wyszukiwarce.</p></div>
+            <div class="listing-intro-copy"><span class="section-index">PRAWNIK DOPASOWANY DO SPRAWY</span><h1 id="listing-title">Znajdź prawnika, <em>któremu powierzysz swoją sprawę.</em></h1><p>Sprawdź specjalizacje, opinie i zakres pomocy. Wybierz osobę, z którą chcesz porozmawiać.</p></div>
+            <figure class="listing-intro-media"><img src="../assets/lawyer-workspace.jpg" alt="Prawniczka analizuje dokumenty przy biurku" width="1400" height="1050" /><figcaption>Najpierw poznaj doświadczenie. Potem zdecyduj o kontakcie.</figcaption></figure>
           </div>
           <form class="listing-search" id="szukaj" action="index.html" method="get" role="search" aria-label="Wyszukaj prawnika">
-            <div class="listing-search-field"><label for="issue">Czego dotyczy sprawa?</label><input id="issue" name="q" type="search" placeholder="np. rozwód, spadek, umowa" autocomplete="off" /></div>
+            <div class="listing-search-field"><label for="issue">Opisz temat sprawy</label><input id="issue" name="q" type="search" placeholder="np. spadek, odszkodowanie, umowa" autocomplete="off" /></div>
             <div class="listing-search-field"><label for="city">Miasto lub okolice</label><input id="city" name="city" type="search" placeholder="np. Warszawa" autocomplete="address-level2" /></div>
-            <button class="primary-button" type="submit">Pokaż prawników <span aria-hidden="true">→</span></button>
+            <button class="primary-button" type="submit">Szukaj prawników <span aria-hidden="true">→</span></button>
           </form>
+          <div class="listing-quick-topics" aria-label="Popularne tematy"><span>POPULARNE TEMATY</span><button type="button" data-quick-category="spadki">Spadki</button><button type="button" data-quick-category="odszkodowania">Odszkodowania</button><button type="button" data-quick-category="nieruchomości">Nieruchomości</button><button type="button" data-quick-category="biznes">Dla firm</button></div>
         </div>
       </section>
 
@@ -67,28 +68,28 @@
           </aside>
 
           <div class="listing-main">
-            <div class="results-toolbar"><div><span class="section-index">WYNIKI W PODGLĄDZIE</span><h2 id="results-heading">Prawnicy pasujący do wyszukiwania</h2><p id="result-count" role="status" aria-live="polite">4 przykładowe profile</p></div><div class="sort-field"><label for="sort">Sortuj</label><select id="sort"><option value="recommended">Polecane</option><option value="rating">Najwyższa ocena</option><option value="reviews">Najwięcej opinii</option><option value="name">Nazwisko A–Z</option></select></div></div>
+            <div class="results-toolbar"><div><span class="section-index">PRZEJRZYJ I PORÓWNAJ</span><h2 id="results-heading">Prawnicy</h2><p id="result-count" role="status" aria-live="polite">4 przykładowe profile</p></div><div class="sort-field"><label for="sort">Sortuj wyniki</label><select id="sort"><option value="recommended">Polecane</option><option value="rating">Najwyższa ocena</option><option value="reviews">Najwięcej opinii</option><option value="name">Nazwisko A–Z</option></select></div></div>
             <div class="active-filters" id="active-filters" aria-label="Aktywne filtry" hidden></div>
             <div class="result-list" id="result-list">
               <article class="result-card" data-order="1" data-name="Piotr Stosio" data-city="Warszawa" data-scope="private business" data-categories="odszkodowania nieruchomości spadki biznes umowy" data-help="porada reprezentacja dokument" data-keywords="radca prawny sąd odszkodowania regres ubezpieczeniowy spadki majątek umowy" data-rating="4.9" data-reviews="236">
                 <div class="result-portrait"><img src="../assets/piotr-stosio.jpg" alt="Piotr Stosio" width="128" height="128" loading="lazy" /></div>
                 <div class="result-body"><div class="result-topline"><span>RADCA PRAWNY · WARSZAWA</span><span class="result-featured">Wyróżniony profil</span></div><h3><a href="../profil-prawnika.html">Piotr Stosio</a></h3><p class="result-description">Postępowania sądowe, odszkodowania i sprawy majątkowe.</p><div class="result-tags"><span>Odszkodowania</span><span>Nieruchomości</span><span>Spadki</span></div><div class="result-proof"><span class="result-score"><span aria-hidden="true">★</span> 4,9 <small>· 236 opinii</small></span><span>2277 odpowiedzi na pytania</span></div></div>
-                <div class="result-actions"><a class="result-primary" href="../profil-prawnika.html">Zobacz profil <span aria-hidden="true">→</span></a><a class="result-secondary" href="../profil-prawnika.html#kontakt">Sposoby kontaktu</a></div>
+                <div class="result-actions"><a class="result-primary" href="../profil-prawnika.html">Zobacz profil <span aria-hidden="true">→</span></a><button class="result-compare" type="button" aria-pressed="false" aria-label="Dodaj Piotra Stosia do porównania">+ Porównaj</button></div>
               </article>
               <article class="result-card" data-order="2" data-name="Adrian Gajzler" data-city="Warszawa" data-scope="private business" data-categories="biznes umowy" data-help="porada reprezentacja" data-keywords="adwokat spory firmowe prywatne kontrakty sąd" data-rating="5.0" data-reviews="73">
                 <div class="result-portrait"><img src="../assets/adrian-gajzler.png" alt="Adrian Gajzler" width="128" height="128" loading="lazy" /></div>
                 <div class="result-body"><div class="result-topline"><span>ADWOKAT · WARSZAWA</span></div><h3><a href="https://www.specprawnik.pl/adwokat/adrian-gajzler-59143/">Adrian Gajzler</a></h3><p class="result-description">Spory prawne w biznesie i sprawy prywatne.</p><div class="result-tags"><span>Spory z firmami</span><span>Umowy</span><span>Reprezentacja</span></div><div class="result-proof"><span class="result-score"><span aria-hidden="true">★</span> 5,0 <small>· 73 opinie</small></span></div></div>
-                <div class="result-actions"><a class="result-primary" href="https://www.specprawnik.pl/adwokat/adrian-gajzler-59143/">Zobacz profil <span aria-hidden="true">→</span></a><a class="result-secondary" href="https://www.specprawnik.pl/adwokat/adrian-gajzler-59143/">Sposoby kontaktu</a></div>
+                <div class="result-actions"><a class="result-primary" href="https://www.specprawnik.pl/adwokat/adrian-gajzler-59143/">Zobacz profil <span aria-hidden="true">→</span></a><button class="result-compare" type="button" aria-pressed="false" aria-label="Dodaj Adriana Gajzlera do porównania">+ Porównaj</button></div>
               </article>
               <article class="result-card" data-order="3" data-name="Adam Karolak" data-city="Warszawa" data-scope="private" data-categories="spadki" data-help="porada reprezentacja dokument" data-keywords="radca prawny testament zachowek dziedziczenie" data-rating="5.0" data-reviews="23">
                 <div class="result-portrait"><img src="../assets/adam-karolak.jpg" alt="Adam Karolak" width="128" height="128" loading="lazy" /></div>
                 <div class="result-body"><div class="result-topline"><span>RADCA PRAWNY · WARSZAWA</span></div><h3><a href="https://www.specprawnik.pl/radca-prawny/adam-karolak-50237/">Adam Karolak</a></h3><p class="result-description">Spadki, testamenty i zachowek.</p><div class="result-tags"><span>Spadki</span><span>Testamenty</span><span>Zachowek</span></div><div class="result-proof"><span class="result-score"><span aria-hidden="true">★</span> 5,0 <small>· 23 opinie</small></span></div></div>
-                <div class="result-actions"><a class="result-primary" href="https://www.specprawnik.pl/radca-prawny/adam-karolak-50237/">Zobacz profil <span aria-hidden="true">→</span></a><a class="result-secondary" href="https://www.specprawnik.pl/radca-prawny/adam-karolak-50237/">Sposoby kontaktu</a></div>
+                <div class="result-actions"><a class="result-primary" href="https://www.specprawnik.pl/radca-prawny/adam-karolak-50237/">Zobacz profil <span aria-hidden="true">→</span></a><button class="result-compare" type="button" aria-pressed="false" aria-label="Dodaj Adama Karolaka do porównania">+ Porównaj</button></div>
               </article>
               <article class="result-card" data-order="4" data-name="Grzegorz Kantecki" data-city="Warszawa" data-scope="private" data-categories="spadki nieruchomości" data-help="porada reprezentacja" data-keywords="radca prawny postępowania sądowe dziedziczenie majątek" data-rating="4.9" data-reviews="145">
                 <div class="result-portrait"><img src="../assets/grzegorz-kantecki.jpg" alt="Grzegorz Kantecki" width="128" height="128" loading="lazy" /></div>
                 <div class="result-body"><div class="result-topline"><span>RADCA PRAWNY · WARSZAWA</span></div><h3><a href="https://www.specprawnik.pl/radca-prawny/grzegorz-kantecki-56839/">Grzegorz Kantecki</a></h3><p class="result-description">Spadki i postępowania sądowe.</p><div class="result-tags"><span>Spadki</span><span>Spory sądowe</span><span>Porady</span></div><div class="result-proof"><span class="result-score"><span aria-hidden="true">★</span> 4,9 <small>· 145 opinii</small></span></div></div>
-                <div class="result-actions"><a class="result-primary" href="https://www.specprawnik.pl/radca-prawny/grzegorz-kantecki-56839/">Zobacz profil <span aria-hidden="true">→</span></a><a class="result-secondary" href="https://www.specprawnik.pl/radca-prawny/grzegorz-kantecki-56839/">Sposoby kontaktu</a></div>
+                <div class="result-actions"><a class="result-primary" href="https://www.specprawnik.pl/radca-prawny/grzegorz-kantecki-56839/">Zobacz profil <span aria-hidden="true">→</span></a><button class="result-compare" type="button" aria-pressed="false" aria-label="Dodaj Grzegorza Kanteckiego do porównania">+ Porównaj</button></div>
               </article>
             </div>
             <div class="no-results" id="no-results" hidden><span aria-hidden="true">↗</span><h3>W tym podglądzie nie ma pasującego profilu.</h3><p>Spróbuj innego tematu, miasta lub rodzaju pomocy.</p><button type="button" id="empty-reset">Wyczyść filtry</button></div>
@@ -97,6 +98,9 @@
         </div>
       </section>
     </main>
+
+    <div class="compare-dock" id="compare-dock" hidden><div><strong id="compare-count">0 wybranych</strong><span id="compare-feedback" role="status" aria-live="polite">Wybierz co najmniej dwa profile.</span></div><div class="compare-dock-actions"><button type="button" id="compare-clear">Wyczyść</button><button type="button" id="compare-open" disabled>Porównaj profile <span aria-hidden="true">→</span></button></div></div>
+    <dialog class="compare-dialog" id="compare-dialog" aria-labelledby="compare-title"><div class="compare-dialog-head"><div><span class="section-index">POMOC W WYBORZE</span><h2 id="compare-title">Porównaj prawników</h2><p>Zestawienie obejmuje informacje pokazane na kartach profili.</p></div><button type="button" class="compare-close" id="compare-close" aria-label="Zamknij porównanie">×</button></div><div class="compare-grid" id="compare-grid"></div></dialog>
 
     <footer class="site-footer"><div class="shell footer-inner"><div><a class="wordmark footer-brand" href="../index.html">spec<span>prawnik</span><i>.pl</i></a><p>Wybierz prawnika świadomie.</p></div><nav aria-label="Linki w stopce"><a href="../index.html">Strona główna</a><a href="../index.html#sciezki">Sposoby pomocy</a><a href="../index.html#dla-firm">Dla firm</a><a href="../index.html#dla-prawnikow">Dla prawników</a><a href="https://www.specprawnik.pl/inne/kontakt/">Kontakt</a></nav></div><div class="shell footer-bottom">Koncepcja redesignu listy prawników. Wyniki obejmują cztery przykładowe profile, a pełny katalog i zamówienia są dostępne w aktualnym serwisie SpecPrawnik.</div></footer>
   </body>
