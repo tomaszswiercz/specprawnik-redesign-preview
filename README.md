@@ -1,6 +1,6 @@
 # SpecPrawnik — koncepcja redesignu
 
-Publiczny prototyp redesignu strony głównej, listy prawników (`prawnik/index.html`) i przykładowego profilu prawnika (`profil-prawnika.html`). Główne menu prowadzi do listy. Lista zawiera cztery przykładowe profile oraz lokalne wyszukiwanie, filtrowanie, sortowanie i porównanie do trzech profili. Karta Piotra Stosia otwiera podstronę demonstracyjną. Profil obejmuje pełny katalog 33 usług z publicznej oferty, doświadczenie, opinie, odpowiedzi, publikacje, rozliczenia i dostępność. Formularze kontaktowe, pozostałe profile i zamówienia prowadzą do aktualnego serwisu SpecPrawnik.
+Publiczny prototyp redesignu strony głównej, listy prawników (`prawnik/index.html`) i przykładowego profilu prawnika (`profil-prawnika.html`). Główne menu prowadzi do listy. Lista zawiera 16 przykładowych profili z 12 miast, lokalne wyszukiwanie, filtrowanie po temacie, rodzaju pomocy, zawodzie, ocenie i liczbie opinii, sortowanie oraz porównanie do trzech profili. Karta Piotra Stosia otwiera podstronę demonstracyjną. Profil obejmuje pełny katalog 33 usług z publicznej oferty, doświadczenie, opinie, odpowiedzi, publikacje, rozliczenia i dostępność. Formularze kontaktowe, pozostałe profile i zamówienia prowadzą do aktualnego serwisu SpecPrawnik.
 
 Strona jest statyczna (`index.html`, `prawnik/index.html`, `profil-prawnika.html` oraz arkusze stylów i skrypty). Projekt Vercel wdraża ją bez kroku budowania.
 

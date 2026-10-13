@@ -4,6 +4,9 @@ const searchCity = document.querySelector('#city');
 const scopeInputs = [...document.querySelectorAll('input[name="scope"]')];
 const categorySelect = document.querySelector('#category');
 const helpSelect = document.querySelector('#help-type');
+const professionSelect = document.querySelector('#profession');
+const minimumRatingSelect = document.querySelector('#minimum-rating');
+const minimumReviewsSelect = document.querySelector('#minimum-reviews');
 const sortSelect = document.querySelector('#sort');
 const cards = [...document.querySelectorAll('.result-card')];
 const resultList = document.querySelector('#result-list');
@@ -29,7 +32,7 @@ searchIssue.value = params.get('q') || '';
 searchCity.value = params.get('city') || '';
 const initialScope = scopeInputs.find((input) => input.value === params.get('scope'));
 if (initialScope) initialScope.checked = true;
-for (const [control, key] of [[categorySelect, 'category'], [helpSelect, 'help'], [sortSelect, 'sort']]) {
+for (const [control, key] of [[categorySelect, 'category'], [helpSelect, 'help'], [professionSelect, 'profession'], [minimumRatingSelect, 'rating'], [minimumReviewsSelect, 'reviews'], [sortSelect, 'sort']]) {
   if ([...control.options].some((option) => option.value === params.get(key))) control.value = params.get(key);
 }
 
@@ -44,7 +47,7 @@ function updateURL() {
   const scope = scopeInputs.find((input) => input.checked)?.value || 'all';
   if (scope !== 'all') url.searchParams.set('scope', scope);
   else url.searchParams.delete('scope');
-  for (const [key, value, defaultValue] of [['category', categorySelect.value, 'all'], ['help', helpSelect.value, 'all'], ['sort', sortSelect.value, 'recommended']]) {
+  for (const [key, value, defaultValue] of [['category', categorySelect.value, 'all'], ['help', helpSelect.value, 'all'], ['profession', professionSelect.value, 'all'], ['rating', minimumRatingSelect.value, 'all'], ['reviews', minimumReviewsSelect.value, 'all'], ['sort', sortSelect.value, 'recommended']]) {
     if (value !== defaultValue) url.searchParams.set(key, value);
     else url.searchParams.delete(key);
   }
@@ -57,13 +60,19 @@ function renderResults() {
   const scope = scopeInputs.find((input) => input.checked)?.value || 'all';
   const category = normalize(categorySelect.value);
   const help = helpSelect.value;
+  const profession = professionSelect.value;
+  const minimumRating = minimumRatingSelect.value;
+  const minimumReviews = minimumReviewsSelect.value;
   const visible = cards.filter((card) => {
     const searchable = normalize(`${card.dataset.name} ${card.dataset.keywords} ${card.textContent}`);
     return (!query || searchable.includes(query))
       && (!city || normalize(card.dataset.city).includes(city))
       && (scope === 'all' || card.dataset.scope.split(' ').includes(scope))
       && (category === 'all' || normalize(card.dataset.categories).split(' ').includes(category))
-      && (help === 'all' || card.dataset.help.split(' ').includes(help));
+      && (help === 'all' || card.dataset.help.split(' ').includes(help))
+      && (profession === 'all' || card.dataset.profession === profession)
+      && (minimumRating === 'all' || Number(card.dataset.rating) >= Number(minimumRating))
+      && (minimumReviews === 'all' || Number(card.dataset.reviews) >= Number(minimumReviews));
   });
 
   const sorters = {
@@ -87,6 +96,9 @@ function renderResults() {
   if (scope !== 'all') filters.push(['scope', scope === 'private' ? 'Sprawy prywatne' : 'Sprawy firmowe']);
   if (category !== 'all') filters.push(['category', categorySelect.selectedOptions[0].textContent]);
   if (help !== 'all') filters.push(['help', helpSelect.selectedOptions[0].textContent]);
+  if (profession !== 'all') filters.push(['profession', professionSelect.selectedOptions[0].textContent]);
+  if (minimumRating !== 'all') filters.push(['rating', minimumRatingSelect.selectedOptions[0].textContent]);
+  if (minimumReviews !== 'all') filters.push(['reviews', minimumReviewsSelect.selectedOptions[0].textContent]);
   activeFilters.replaceChildren(...filters.map(([key, label]) => {
     const button = document.createElement('button');
     button.type = 'button';
@@ -102,6 +114,9 @@ function renderResults() {
       if (key === 'scope') scopeInputs[0].checked = true;
       if (key === 'category') categorySelect.value = 'all';
       if (key === 'help') helpSelect.value = 'all';
+      if (key === 'profession') professionSelect.value = 'all';
+      if (key === 'rating') minimumRatingSelect.value = 'all';
+      if (key === 'reviews') minimumReviewsSelect.value = 'all';
       updateURL();
       renderResults();
     });
@@ -117,6 +132,9 @@ function resetFilters() {
   scopeInputs[0].checked = true;
   categorySelect.value = 'all';
   helpSelect.value = 'all';
+  professionSelect.value = 'all';
+  minimumRatingSelect.value = 'all';
+  minimumReviewsSelect.value = 'all';
   sortSelect.value = 'recommended';
   updateURL();
   renderResults();
@@ -133,6 +151,9 @@ searchCity.addEventListener('input', () => { updateURL(); renderResults(); });
 scopeInputs.forEach((input) => input.addEventListener('change', () => { updateURL(); renderResults(); }));
 categorySelect.addEventListener('change', () => { updateURL(); renderResults(); });
 helpSelect.addEventListener('change', () => { updateURL(); renderResults(); });
+professionSelect.addEventListener('change', () => { updateURL(); renderResults(); });
+minimumRatingSelect.addEventListener('change', () => { updateURL(); renderResults(); });
+minimumReviewsSelect.addEventListener('change', () => { updateURL(); renderResults(); });
 sortSelect.addEventListener('change', () => { updateURL(); renderResults(); });
 document.querySelector('#clear-filters').addEventListener('click', resetFilters);
 document.querySelector('#empty-reset').addEventListener('click', resetFilters);
